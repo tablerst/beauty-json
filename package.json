@@ -1,0 +1,84 @@
+{
+  "name": "beauty-json",
+  "keywords": [
+    "vscode",
+    "json",
+    "beauty",
+    "tree",
+    "html",
+    "css",
+    "javascript",
+    "nodejs",
+    "github",
+    "gitlab",
+    "git",
+    "c",
+    "C++",
+    "web",
+    "js",
+    "npm",
+    "python",
+    "java",
+    "Ruby",
+    "webpack",
+    "php",
+    "mysql",
+    "sql",
+    "apache",
+    "nginx",
+    "iis",
+    "wordpress",
+    "tencent",
+    "linux",
+    "window",
+    "mac",
+    "vs",
+    "google",
+    "markdown",
+    "xml",
+    "run",
+    "commands",
+    "view",
+    "diff",
+    "tree",
+    "compare"
+  ],
+  "version": "1.0.0",
+  "publisher": "mizore",
+  "devDependencies": {
+    "@biomejs/biome": "1.9.2",
+    "turbo": "^2.1.2",
+    "typescript": "^5.4.5"
+  },
+  "engines": {
+    "node": ">=18",
+    "vscode": "^1.74.0"
+  },
+  "packageManager": "bun@1.1.27",
+  "private": true,
+  "scripts": {
+    "build": "turbo build",
+    "dev": "turbo dev",
+    "lint": "biome lint --write ./src/**/*.ts ./src/**/*.tsx",
+    "format": "biome format --write ./src/**/*.ts ./src/**/*.tsx",
+    "check": "biome check --write ./src/**/*.ts ./src/**/*.tsx"
+  },
+  "activationEvents": [
+    "onLanguage:json",
+    "onLanguage:jsonc"
+  ],
+  "main": "./src/extension.ts",
+  "contributes": {
+    "languages": [
+      {
+        "id": "json",
+        "extensions": [
+          ".json"
+        ],
+        "aliases": [
+          "Json"
+        ]
+      }
+    ]
+  }
+}
