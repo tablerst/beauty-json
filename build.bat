@@ -5,7 +5,7 @@ set GOOS=wasip1
 set GOARCH=wasm
 
 :: 执行go build命令
-go build -o main.wasm my.go
+go build -ldflags="-s -w" -o static/main.wasm my.go
 
 :: 检查命令执行结果
 if %ERRORLEVEL% neq 0 (
